@@ -14259,7 +14259,7 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Continuous-Control-Report">Continuous Control Report<a class="anchor-link" href="#Continuous-Control-Report">&#182;</a></h1><p>To complete this project, I went on a terrible dark journey of despair, but ultimately came out the other side with a working implementation and a bit of experience.  My journey consisted of 3 main parts:</p>
+<h1 id="Continuous-Control-Report">Continuous Control Report<a class="anchor-link" href="#Continuous-Control-Report">&#182;</a></h1><p>To complete this project, I went on a terrible dark journey of despair and hope, and ultimately came out the other side with a working implementation and a bit of experience.  My journey consisted of 3 main parts:</p>
 <ul>
 <li>Initially I was drawn to the description of the Proximal Policy Optimization (PPO) algorithm, after <a href="https://openai.com/blog/openai-baselines-ppo/">reading</a> that it is simple and often more stable than other algorithms. I was greatly inspired by the beautiful modular implementation demonstrated in the lessons at <a href="https://github.com/ShangtongZhang/DeepRL">S. Zhang's</a>, and tried to adapt his PPO continuous module to my uses, trying both the single and multiple agent environments.  This was a spectacular failure that cost me more than a week of trouble.  I was unable to demonstrate any learning, and the small initial scores would immediately decay after more training.  Perhaps some of the lessons learned later can be applicable to this situation, but I tried changing all conceivable parameters without seeing any improvement.</li>
 </ul>
@@ -14285,7 +14285,7 @@ a.anchor-link {
 <p>I additionally explored the gradient clip level, without any effect.</p>
 <h2 id="Learning-Rate-Exploration">Learning Rate Exploration<a class="anchor-link" href="#Learning-Rate-Exploration">&#182;</a></h2><p>The initial learning rates were 1e-3 for both the actor and critic.  Reducing these to 1e-4 gave much better learning.  The batch size here was back at 128</p>
 <p><img src="./images/result3.png" alt="image"></p>
-<p>The batch size was reduced in steps of /2 until at a size of 8 it finally gave a good result.</p>
+<p>The batch size was reduced in steps of /2 until at a size of 8 it finally gave a good result, solving the environment in 500 episodes.</p>
 <p><img src="./images/result4.png" alt="image"></p>
 
 </div>
